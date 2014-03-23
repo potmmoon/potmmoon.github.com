@@ -4,7 +4,7 @@
   <title><![CDATA[Category: opensource | My Octopress Blog]]></title>
   <link href="http://potmmoon.github.io/blog/categories/opensource/atom.xml" rel="self"/>
   <link href="http://potmmoon.github.io/"/>
-  <updated>2014-03-23T19:21:22+08:00</updated>
+  <updated>2014-03-23T19:25:48+08:00</updated>
   <id>http://potmmoon.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -21,7 +21,7 @@
     <content type="html"><![CDATA[<h2>搭建octopress</h2>
 
 <p>搭建了这个blog，看了网上各位同学的文章，具体步骤我就不说了.
-还是遇到了好几个问题。</p>
+说说遇到的几个问题吧。</p>
 
 <h2>问题1</h2>
 
