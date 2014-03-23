@@ -9,7 +9,7 @@ tags: [octopress]
 
 ##搭建octopress
 搭建了这个blog，看了网上各位同学的文章，具体步骤我就不说了.
-还需遇到了好几个问题。
+还是遇到了好几个问题。
 
 ##问题1 
  Error running 'requirements_osx_brew_libs_install autoconf automake
