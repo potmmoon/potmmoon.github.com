@@ -9,8 +9,8 @@
 	<meta name="author" content="Your Name">
 
 	
-	<meta name="description" content=" Mar 23rd, 2014 My First Blog Mar 23rd, 2014 This Is My First Blog Blog Archives
-">
+	<meta name="description" content="Mar 23rd, 2014 opensource, tools 搭建octopress 打完收工 搭建octopress 搭建了这个blog，看了网上各位同学的文章，具体步骤我就不说了.
+还需遇到了好几个问题。 问题1 Error running &lsquo; &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -102,46 +102,61 @@
   
 
 
-<time datetime="2014-03-23T13:04:01+08:00" data-updated="true" itemprop="datePublished">Mar 23<span>rd</span>, 2014</time></div>
+<time datetime="2014-03-23T18:21:32+08:00" data-updated="true" itemprop="datePublished">Mar 23<span>rd</span>, 2014</time></div>
 		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/opensource/'>opensource</a>, <a class='category' href='/blog/categories/tools/'>tools</a>
+
 
 </div>
 		
 	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2014/03/23/my-first-blog/" itemprop="url">My First Blog</a></h1>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/03/23/da-wan-shou-gong/" itemprop="url">搭建octopress 打完收工</a></h1>
 	<div class="entry-content" itemprop="articleBody">
-		
+		<h2>搭建octopress</h2>
 
-		
-		
-	</div>
+<p>搭建了这个blog，看了网上各位同学的文章，具体步骤我就不说了.
+还需遇到了好几个问题。</p>
 
-</article>
+<h2>问题1</h2>
 
+<p> Error running &lsquo;requirements_osx_brew_libs_install autoconf automake
+ libtool pkg-config libyaml readline libksba openssl&rsquo;
+遇到这个问题的解决办法就是用brew一个一个的install</p>
 
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
+<p>ps:大家用homebrew的时候一定要删除自己的macport，不然会碰到各种诡异的冲突</p>
 
+<h2>问题2</h2>
 
+<p>clang: error: unknown argument: &lsquo;-multiply_definedsuppress&rsquo;
+[-Wunused-command-line-argument-hard-error-in-future]
+clang: note: this will be a hard error (cannot be downgraded to a warning) in
+the future
+make: *** [redcloth_scan.bundle] Error 1</p>
 
+<p>make failed, exit code 2</p>
 
+<p>Gem files will remain installed in
+/Users/hcy/.bundler/tmp/5760/gems/RedCloth-4.2.9 for inspection.
+Results logged to
+/Users/hcy/.bundler/tmp/5760/extensions/universal-darwin-13/2.0.0/RedCloth-4.2.9/gem_make.out
+An error occurred while installing RedCloth (4.2.9), and Bundler cannot
+continue.
+Make sure that <code>gem install RedCloth -v '4.2.9'</code> succeeds before bundling.</p>
 
+<p>这个问题出现在我使用2.0.0的ruby和xcode5.1环境下，解决方案是要安装手动去安装redcloth
+，然后在命令行前面加入ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future</p>
 
+<h2>总结</h2>
 
+<p>1 不要去动苹果自带的ruby</p>
 
-  
+<p>2 最好使用rvm来安装1.9.3，一路使用rvm来安装，这样会少的碰到各种错误</p>
 
+<h2>最后</h2>
 
-<time datetime="2014-03-23T13:03:41+08:00" data-updated="true" itemprop="datePublished">Mar 23<span>rd</span>, 2014</time></div>
-		<div class="tags">
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2014/03/23/this-is-my-first-blog/" itemprop="url">This Is My First Blog</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		
+<p>最近真的活挺忙的，博客就挑问题写了。回头为大家分享一些技术文章，共同进步。</p>
 
 		
 		

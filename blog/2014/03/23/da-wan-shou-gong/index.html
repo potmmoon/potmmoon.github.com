@@ -5,11 +5,12 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>My first blog - My Octopress Blog</title>
+	<title>搭建octopress 打完收工 - My Octopress Blog</title>
 	<meta name="author" content="Your Name">
 
 	
-	<meta name="description" content=" My First Blog ">
+	<meta name="description" content="搭建octopress 打完收工 搭建octopress 搭建了这个blog，看了网上各位同学的文章，具体步骤我就不说了.
+还需遇到了好几个问题。 问题1 Error running &lsquo;requirements_osx_brew_libs_install autoconf &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +20,7 @@
 
 	<link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://potmmoon.github.io/blog/2014/03/23/my-first-blog/">
+	<link rel="canonical" href="http://potmmoon.github.io/blog/2014/03/23/da-wan-shou-gong/">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -84,8 +85,50 @@
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-	<h1 class="title" itemprop="name">My First Blog</h1>
-	<div class="entry-content" itemprop="articleBody">
+	<h1 class="title" itemprop="name">搭建octopress 打完收工</h1>
+	<div class="entry-content" itemprop="articleBody"><h2>搭建octopress</h2>
+
+<p>搭建了这个blog，看了网上各位同学的文章，具体步骤我就不说了.
+还需遇到了好几个问题。</p>
+
+<h2>问题1</h2>
+
+<p> Error running &lsquo;requirements_osx_brew_libs_install autoconf automake
+ libtool pkg-config libyaml readline libksba openssl&rsquo;
+遇到这个问题的解决办法就是用brew一个一个的install</p>
+
+<p>ps:大家用homebrew的时候一定要删除自己的macport，不然会碰到各种诡异的冲突</p>
+
+<h2>问题2</h2>
+
+<p>clang: error: unknown argument: &lsquo;-multiply_definedsuppress&rsquo;
+[-Wunused-command-line-argument-hard-error-in-future]
+clang: note: this will be a hard error (cannot be downgraded to a warning) in
+the future
+make: *** [redcloth_scan.bundle] Error 1</p>
+
+<p>make failed, exit code 2</p>
+
+<p>Gem files will remain installed in
+/Users/hcy/.bundler/tmp/5760/gems/RedCloth-4.2.9 for inspection.
+Results logged to
+/Users/hcy/.bundler/tmp/5760/extensions/universal-darwin-13/2.0.0/RedCloth-4.2.9/gem_make.out
+An error occurred while installing RedCloth (4.2.9), and Bundler cannot
+continue.
+Make sure that <code>gem install RedCloth -v '4.2.9'</code> succeeds before bundling.</p>
+
+<p>这个问题出现在我使用2.0.0的ruby和xcode5.1环境下，解决方案是要安装手动去安装redcloth
+，然后在命令行前面加入ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future</p>
+
+<h2>总结</h2>
+
+<p>1 不要去动苹果自带的ruby</p>
+
+<p>2 最好使用rvm来安装1.9.3，一路使用rvm来安装，这样会少的碰到各种错误</p>
+
+<h2>最后</h2>
+
+<p>最近真的活挺忙的，博客就挑问题写了。回头为大家分享一些技术文章，共同进步。</p>
 </div>
 
 </article>
